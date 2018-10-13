@@ -14,6 +14,8 @@
 		5A210484217271A4008EA4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A210482217271A4008EA4D2 /* LaunchScreen.storyboard */; };
 		5A21048F217271A5008EA4D2 /* BCObfuscationExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21048E217271A5008EA4D2 /* BCObfuscationExampleTests.swift */; };
 		5A21049A217271A5008EA4D2 /* BCObfuscationExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A210499217271A5008EA4D2 /* BCObfuscationExampleUITests.swift */; };
+		5A2104A921727257008EA4D2 /* BCObfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2104A821727257008EA4D2 /* BCObfuscation.swift */; };
+		5A2104AA21727257008EA4D2 /* BCObfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2104A821727257008EA4D2 /* BCObfuscation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		5A210495217271A5008EA4D2 /* BCObfuscationExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCObfuscationExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A210499217271A5008EA4D2 /* BCObfuscationExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCObfuscationExampleUITests.swift; sourceTree = "<group>"; };
 		5A21049B217271A5008EA4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A2104A821727257008EA4D2 /* BCObfuscation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCObfuscation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				5A210480217271A4008EA4D2 /* Assets.xcassets */,
 				5A210482217271A4008EA4D2 /* LaunchScreen.storyboard */,
 				5A210485217271A4008EA4D2 /* Info.plist */,
+				5A2104A72172724F008EA4D2 /* BCObfuscation */,
 			);
 			path = BCObfuscationExample;
 			sourceTree = "<group>";
@@ -123,6 +127,15 @@
 				5A21049B217271A5008EA4D2 /* Info.plist */,
 			);
 			path = BCObfuscationExampleUITests;
+			sourceTree = "<group>";
+		};
+		5A2104A72172724F008EA4D2 /* BCObfuscation */ = {
+			isa = PBXGroup;
+			children = (
+				5A2104A821727257008EA4D2 /* BCObfuscation.swift */,
+			);
+			name = BCObfuscation;
+			path = ../../BCObfuscation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2104A921727257008EA4D2 /* BCObfuscation.swift in Sources */,
 				5A21047C217271A3008EA4D2 /* ViewController.swift in Sources */,
 				5A21047A217271A3008EA4D2 /* AppDelegate.swift in Sources */,
 			);
@@ -265,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2104AA21727257008EA4D2 /* BCObfuscation.swift in Sources */,
 				5A21048F217271A5008EA4D2 /* BCObfuscationExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
