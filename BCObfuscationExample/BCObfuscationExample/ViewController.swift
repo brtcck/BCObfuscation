@@ -10,16 +10,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // MARK: - IBOutlets
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var encryptedTextLabel: UILabel!
+    @IBOutlet private weak var decryptedTextLabel: UILabel!
+
+    // MARK: Private variable declerations
+
+    /// BCObfuscations instance
+    private let obfuscation = BCObfuscation()
+
+    /// Encrypted 8-bit unsigned integer array
+    private var encrypted: [UInt8]?
+}
+
+// MARK: - Actions
+
+extension ViewController {
+
+    @IBAction private func didTapEncryptButton(_ sender: UIButton) {
+
+        guard let text = textField.text,
+            !text.isEmpty else {
+            return
+        }
+
+        encrypted = obfuscation.obfuscate(with: text)
+        encryptedTextLabel.text = "Encrypted: \(encrypted ?? [])"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction private func didTapDecryptButton(_ sender: UIButton) {
+
+        guard let encrypted = encrypted,
+            !encrypted.isEmpty else {
+            return
+        }
+
+        let plainText = obfuscation.resolve(with: encrypted)
+        decryptedTextLabel.text = "Decrypted: \(plainText)"
     }
-
-
 }
 
